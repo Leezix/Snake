@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		743C89B41E8D4FDC00C70617 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B31E8D4FDC00C70617 /* Snake.m */; };
+		743C89B51E8D4FE000C70617 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B31E8D4FDC00C70617 /* Snake.m */; };
+		743C89B61E8D4FE100C70617 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B31E8D4FDC00C70617 /* Snake.m */; };
+		743C89BA1E8D4FF300C70617 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B91E8D4FF300C70617 /* ViewController.m */; };
+		743C89BB1E8D4FF300C70617 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B91E8D4FF300C70617 /* ViewController.m */; };
+		743C89BC1E8D4FF300C70617 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89B91E8D4FF300C70617 /* ViewController.m */; };
+		743C89BF1E8D500D00C70617 /* GamaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89BE1E8D500D00C70617 /* GamaPool.m */; };
+		743C89C01E8D500D00C70617 /* GamaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89BE1E8D500D00C70617 /* GamaPool.m */; };
+		743C89C11E8D500D00C70617 /* GamaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89BE1E8D500D00C70617 /* GamaPool.m */; };
+		743C89C41E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
+		743C89C51E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
+		743C89C61E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
 		74C0BB221E8BEDE6002EA879 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB211E8BEDE6002EA879 /* main.m */; };
 		74C0BB251E8BEDE6002EA879 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB241E8BEDE6002EA879 /* AppDelegate.m */; };
-		74C0BB281E8BEDE6002EA879 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB271E8BEDE6002EA879 /* ViewController.m */; };
 		74C0BB2B1E8BEDE6002EA879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB291E8BEDE6002EA879 /* Main.storyboard */; };
 		74C0BB2D1E8BEDE6002EA879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */; };
 		74C0BB301E8BEDE6002EA879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */; };
@@ -35,12 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		743C89B21E8D4FDC00C70617 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
+		743C89B31E8D4FDC00C70617 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
+		743C89B81E8D4FF300C70617 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		743C89B91E8D4FF300C70617 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		743C89BD1E8D500D00C70617 /* GamaPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamaPool.h; sourceTree = "<group>"; };
+		743C89BE1E8D500D00C70617 /* GamaPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamaPool.m; sourceTree = "<group>"; };
+		743C89C21E8D518E00C70617 /* ZXPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXPoint.h; sourceTree = "<group>"; };
+		743C89C31E8D518E00C70617 /* ZXPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXPoint.m; sourceTree = "<group>"; };
 		74C0BB1D1E8BEDE6002EA879 /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C0BB211E8BEDE6002EA879 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74C0BB231E8BEDE6002EA879 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74C0BB241E8BEDE6002EA879 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		74C0BB261E8BEDE6002EA879 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		74C0BB271E8BEDE6002EA879 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		74C0BB2A1E8BEDE6002EA879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C0BB2F1E8BEDE6002EA879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		743C89B71E8D4FF300C70617 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				743C89B81E8D4FF300C70617 /* ViewController.h */,
+				743C89B91E8D4FF300C70617 /* ViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		74C0BB141E8BEDE5002EA879 = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +127,11 @@
 		74C0BB1F1E8BEDE6002EA879 /* snake */ = {
 			isa = PBXGroup;
 			children = (
-				74C0BB531E8BEE1F002EA879 /* controller */,
+				743C89B71E8D4FF300C70617 /* controller */,
 				74C0BB541E8BEE1F002EA879 /* model */,
 				74C0BB551E8BEE1F002EA879 /* view */,
 				74C0BB231E8BEDE6002EA879 /* AppDelegate.h */,
 				74C0BB241E8BEDE6002EA879 /* AppDelegate.m */,
-				74C0BB261E8BEDE6002EA879 /* ViewController.h */,
-				74C0BB271E8BEDE6002EA879 /* ViewController.m */,
 				74C0BB291E8BEDE6002EA879 /* Main.storyboard */,
 				74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */,
 				74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */,
@@ -143,16 +167,13 @@
 			path = snakeUITests;
 			sourceTree = "<group>";
 		};
-		74C0BB531E8BEE1F002EA879 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
 		74C0BB541E8BEE1F002EA879 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				743C89B21E8D4FDC00C70617 /* Snake.h */,
+				743C89B31E8D4FDC00C70617 /* Snake.m */,
+				743C89C21E8D518E00C70617 /* ZXPoint.h */,
+				743C89C31E8D518E00C70617 /* ZXPoint.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -160,6 +181,8 @@
 		74C0BB551E8BEE1F002EA879 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				743C89BD1E8D500D00C70617 /* GamaPool.h */,
+				743C89BE1E8D500D00C70617 /* GamaPool.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -297,9 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C0BB281E8BEDE6002EA879 /* ViewController.m in Sources */,
+				743C89C41E8D518E00C70617 /* ZXPoint.m in Sources */,
+				743C89B41E8D4FDC00C70617 /* Snake.m in Sources */,
+				743C89BF1E8D500D00C70617 /* GamaPool.m in Sources */,
 				74C0BB251E8BEDE6002EA879 /* AppDelegate.m in Sources */,
 				74C0BB221E8BEDE6002EA879 /* main.m in Sources */,
+				743C89BA1E8D4FF300C70617 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743C89BB1E8D4FF300C70617 /* ViewController.m in Sources */,
+				743C89C01E8D500D00C70617 /* GamaPool.m in Sources */,
+				743C89B51E8D4FE000C70617 /* Snake.m in Sources */,
+				743C89C51E8D518E00C70617 /* ZXPoint.m in Sources */,
 				74C0BB3B1E8BEDE6002EA879 /* snakeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743C89BC1E8D4FF300C70617 /* ViewController.m in Sources */,
+				743C89C11E8D500D00C70617 /* GamaPool.m in Sources */,
+				743C89B61E8D4FE100C70617 /* Snake.m in Sources */,
+				743C89C61E8D518E00C70617 /* ZXPoint.m in Sources */,
 				74C0BB461E8BEDE6002EA879 /* snakeUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +565,7 @@
 				74C0BB4C1E8BEDE6002EA879 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C0BB4D1E8BEDE6002EA879 /* Build configuration list for PBXNativeTarget "snakeTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +574,7 @@
 				74C0BB4F1E8BEDE6002EA879 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C0BB501E8BEDE6002EA879 /* Build configuration list for PBXNativeTarget "snakeUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +583,7 @@
 				74C0BB521E8BEDE6002EA879 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
