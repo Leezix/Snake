@@ -19,10 +19,17 @@
 		743C89C41E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
 		743C89C51E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
 		743C89C61E8D518E00C70617 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C31E8D518E00C70617 /* ZXPoint.m */; };
+		743C89C91E8D5A8E00C70617 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C81E8D5A8E00C70617 /* GameConfig.m */; };
+		743C89CA1E8D5A8E00C70617 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C81E8D5A8E00C70617 /* GameConfig.m */; };
+		743C89CB1E8D5A8E00C70617 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 743C89C81E8D5A8E00C70617 /* GameConfig.m */; };
+		743C89CF1E8D5BF400C70617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743C89CD1E8D5BF400C70617 /* Assets.xcassets */; };
+		743C89D01E8D5BF400C70617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743C89CD1E8D5BF400C70617 /* Assets.xcassets */; };
+		743C89D11E8D5BF400C70617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743C89CD1E8D5BF400C70617 /* Assets.xcassets */; };
+		743C89D31E8D5BF400C70617 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 743C89CE1E8D5BF400C70617 /* Info.plist */; };
+		743C89D41E8D5BF400C70617 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 743C89CE1E8D5BF400C70617 /* Info.plist */; };
 		74C0BB221E8BEDE6002EA879 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB211E8BEDE6002EA879 /* main.m */; };
 		74C0BB251E8BEDE6002EA879 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB241E8BEDE6002EA879 /* AppDelegate.m */; };
 		74C0BB2B1E8BEDE6002EA879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB291E8BEDE6002EA879 /* Main.storyboard */; };
-		74C0BB2D1E8BEDE6002EA879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */; };
 		74C0BB301E8BEDE6002EA879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */; };
 		74C0BB3B1E8BEDE6002EA879 /* snakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB3A1E8BEDE6002EA879 /* snakeTests.m */; };
 		74C0BB461E8BEDE6002EA879 /* snakeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C0BB451E8BEDE6002EA879 /* snakeUITests.m */; };
@@ -54,14 +61,16 @@
 		743C89BE1E8D500D00C70617 /* GamaPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamaPool.m; sourceTree = "<group>"; };
 		743C89C21E8D518E00C70617 /* ZXPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXPoint.h; sourceTree = "<group>"; };
 		743C89C31E8D518E00C70617 /* ZXPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXPoint.m; sourceTree = "<group>"; };
+		743C89C71E8D5A8E00C70617 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		743C89C81E8D5A8E00C70617 /* GameConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConfig.m; sourceTree = "<group>"; };
+		743C89CD1E8D5BF400C70617 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		743C89CE1E8D5BF400C70617 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = resource/Info.plist; sourceTree = "<group>"; };
 		74C0BB1D1E8BEDE6002EA879 /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C0BB211E8BEDE6002EA879 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74C0BB231E8BEDE6002EA879 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74C0BB241E8BEDE6002EA879 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		74C0BB2A1E8BEDE6002EA879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C0BB2F1E8BEDE6002EA879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		74C0BB311E8BEDE6002EA879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C0BB361E8BEDE6002EA879 /* snakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C0BB3A1E8BEDE6002EA879 /* snakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = snakeTests.m; sourceTree = "<group>"; };
 		74C0BB3C1E8BEDE6002EA879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +113,16 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		743C89CC1E8D5BF400C70617 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				74C0BB291E8BEDE6002EA879 /* Main.storyboard */,
+				74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */,
+				743C89CD1E8D5BF400C70617 /* Assets.xcassets */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		74C0BB141E8BEDE5002EA879 = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +151,7 @@
 				74C0BB551E8BEE1F002EA879 /* view */,
 				74C0BB231E8BEDE6002EA879 /* AppDelegate.h */,
 				74C0BB241E8BEDE6002EA879 /* AppDelegate.m */,
-				74C0BB291E8BEDE6002EA879 /* Main.storyboard */,
-				74C0BB2C1E8BEDE6002EA879 /* Assets.xcassets */,
-				74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */,
-				74C0BB311E8BEDE6002EA879 /* Info.plist */,
+				743C89CC1E8D5BF400C70617 /* resource */,
 				74C0BB201E8BEDE6002EA879 /* Supporting Files */,
 			);
 			path = snake;
@@ -144,6 +160,7 @@
 		74C0BB201E8BEDE6002EA879 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				743C89CE1E8D5BF400C70617 /* Info.plist */,
 				74C0BB211E8BEDE6002EA879 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -174,6 +191,8 @@
 				743C89B31E8D4FDC00C70617 /* Snake.m */,
 				743C89C21E8D518E00C70617 /* ZXPoint.h */,
 				743C89C31E8D518E00C70617 /* ZXPoint.m */,
+				743C89C71E8D5A8E00C70617 /* GameConfig.h */,
+				743C89C81E8D5A8E00C70617 /* GameConfig.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -294,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C0BB301E8BEDE6002EA879 /* LaunchScreen.storyboard in Resources */,
-				74C0BB2D1E8BEDE6002EA879 /* Assets.xcassets in Resources */,
+				743C89CF1E8D5BF400C70617 /* Assets.xcassets in Resources */,
 				74C0BB2B1E8BEDE6002EA879 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743C89D31E8D5BF400C70617 /* Info.plist in Resources */,
+				743C89D01E8D5BF400C70617 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +331,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743C89D41E8D5BF400C70617 /* Info.plist in Resources */,
+				743C89D11E8D5BF400C70617 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +349,7 @@
 				74C0BB251E8BEDE6002EA879 /* AppDelegate.m in Sources */,
 				74C0BB221E8BEDE6002EA879 /* main.m in Sources */,
 				743C89BA1E8D4FF300C70617 /* ViewController.m in Sources */,
+				743C89C91E8D5A8E00C70617 /* GameConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,7 @@
 				743C89B51E8D4FE000C70617 /* Snake.m in Sources */,
 				743C89C51E8D518E00C70617 /* ZXPoint.m in Sources */,
 				74C0BB3B1E8BEDE6002EA879 /* snakeTests.m in Sources */,
+				743C89CA1E8D5A8E00C70617 /* GameConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +375,7 @@
 				743C89B61E8D4FE100C70617 /* Snake.m in Sources */,
 				743C89C61E8D518E00C70617 /* ZXPoint.m in Sources */,
 				74C0BB461E8BEDE6002EA879 /* snakeUITests.m in Sources */,
+				743C89CB1E8D5A8E00C70617 /* GameConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +401,7 @@
 				74C0BB2A1E8BEDE6002EA879 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		74C0BB2E1E8BEDE6002EA879 /* LaunchScreen.storyboard */ = {
@@ -383,6 +410,7 @@
 				74C0BB2F1E8BEDE6002EA879 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -482,7 +510,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = snake/Info.plist;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = snake/resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +522,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = snake/Info.plist;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = snake/resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";

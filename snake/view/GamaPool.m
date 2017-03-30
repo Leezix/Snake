@@ -8,7 +8,26 @@
 
 #import "GamaPool.h"
 
+@interface GamaPool (){
+    
+}
+
+@end
+
 @implementation GamaPool
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initUI];
+    }
+    return self;
+}
+
+- (void)initUI{
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

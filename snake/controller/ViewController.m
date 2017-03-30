@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GamaPool.h"
 
 @interface ViewController ()
+
+@property(nonatomic, weak) GamaPool *gamePool;
 
 @end
 
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    GamaPool *pool = [[GamaPool alloc] init];
+    pool.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:pool];
+    self.gamePool = pool;
 }
 
 

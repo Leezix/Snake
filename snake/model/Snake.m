@@ -14,4 +14,8 @@
     return self.bodys.count;
 }
 
+- (void)move{
+    
+}
+
 @end
