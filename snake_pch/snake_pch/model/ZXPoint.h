@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define ZXPOINT_MAKE(x,y) [ZXPoint pointWithCGPoint:CGPointMake(x, y)]
 @interface ZXPoint : NSObject
 
 @property(nonatomic, assign) int x;

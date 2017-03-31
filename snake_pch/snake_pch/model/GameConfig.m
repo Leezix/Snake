@@ -26,8 +26,8 @@ static GameConfig *config = nil;
 }
 
 - (void)initSelf{
-    self.verticalCount = 10;
-    self.horizontalCount = 10;
+    self.verticalCount = 50;
+    self.horizontalCount = 50;
 }
 
 @end

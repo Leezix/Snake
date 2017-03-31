@@ -18,11 +18,13 @@ typedef enum {
 
 @interface Snake : NSObject
 
-@property(nonatomic, strong) NSArray<ZXPoint *> *bodys;
+@property(nonatomic, strong) NSMutableArray<ZXPoint *> *bodys;
 
 @property(nonatomic, assign) SnakeDirection direction;
 
 @property(nonatomic, assign, readonly) NSUInteger length;
+
++ (instancetype)create;
 
 - (void)move;
 

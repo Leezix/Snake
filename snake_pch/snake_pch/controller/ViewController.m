@@ -21,8 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    GamaPool *pool = [[GamaPool alloc] init];
+    GamaPool *pool = [[GamaPool alloc] initWithSnake:[Snake create]];
     pool.backgroundColor = [UIColor whiteColor];
+    pool.center = self.view.center;
     [self.view addSubview:pool];
     self.gamePool = pool;
 }
