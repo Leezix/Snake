@@ -26,7 +26,7 @@
 }
 
 - (void)initUI{
-    
+    NSLog(@"%@", GAME_CONFIG);
 }
 
 /*

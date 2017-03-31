@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#define GAME_CONFIG [GameConfig shareInstance]
 /**
  游戏的相关配置
  */

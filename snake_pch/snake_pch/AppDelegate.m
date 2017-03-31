@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  snake
+//  snake_pch
 //
-//  Created by lzx on 17/3/29.
+//  Created by lzx on 17/3/31.
 //  Copyright © 2017年 lzx. All rights reserved.
 //
 

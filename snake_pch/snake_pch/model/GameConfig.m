@@ -20,6 +20,7 @@ static GameConfig *config = nil;
     if (!config) {
         config = [[GameConfig alloc] init];
         [config initSelf];
+        
     }
     return config;
 }

@@ -1,18 +1,18 @@
 //
-//  snakeTests.m
-//  snakeTests
+//  snake_pchTests.m
+//  snake_pchTests
 //
-//  Created by lzx on 17/3/29.
+//  Created by lzx on 17/3/31.
 //  Copyright © 2017年 lzx. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface snakeTests : XCTestCase
+@interface snake_pchTests : XCTestCase
 
 @end
 
-@implementation snakeTests
+@implementation snake_pchTests
 
 - (void)setUp {
     [super setUp];
