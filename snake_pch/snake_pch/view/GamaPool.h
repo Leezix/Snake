@@ -10,6 +10,8 @@
 #import "Snake.h"
 @interface GamaPool : UIView
 
+- (BOOL)isKnockPoint:(ZXPoint *)point;
+
 - (instancetype)initWithSnake:(Snake *)snake;
 
 @end

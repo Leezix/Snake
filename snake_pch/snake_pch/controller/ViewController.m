@@ -50,7 +50,7 @@
     __weak typeof(self) weakself = self;
     //修复快速点击btn的bug, _timer在invalidate未完成时, 便执行新的一轮_timer赋值. 导致内存泄露
     if (!_timer.valid) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:1. target:weakself selector:@selector(startGame) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:weakself selector:@selector(startGame) userInfo:nil repeats:YES];
         [_timer fire];
     }
 }
@@ -77,7 +77,8 @@
 - (void)startGame{
     [self.snake moveWithCompleteHandle:^(ZXPoint *headPoint) {
         if ([self isKnock:headPoint]) {//撞墙
-            [self cancel];
+            [self cancelClick];
+            [self alertMessage:@"撞墙了=.="];
         } else {
             [self.gamePool setNeedsDisplay];
         }
@@ -142,7 +143,7 @@
 }
 
 - (BOOL)isKnock:(ZXPoint *)point{
-    return NO;
+    return [self.gamePool isKnockPoint:point];
 }
 
 - (void)alertMessage:(NSString *)message{

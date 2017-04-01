@@ -34,6 +34,10 @@
     _unitLength = self.hm_width / GAME_CONFIG.horizontalCount;
 }
 
+- (BOOL)isKnockPoint:(ZXPoint *)point {
+    return point.x >= GAME_CONFIG.horizontalCount || point.y >= GAME_CONFIG.verticalCount;
+}
+
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     //画边框
