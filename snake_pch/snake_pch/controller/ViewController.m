@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GamaPool.h"
 
-@interface ViewController ()<UIGestureRecognizerDelegate> {
+@interface ViewController () {
     NSMutableArray<NSValue *> *_topTenPoint;
 }
 
@@ -40,9 +40,11 @@
     if ([self.btn.titleLabel.text isEqualToString:@"begin"]) {
         [self begin];
         [self.btn setTitle:@"cancel" forState:UIControlStateNormal];
+        self.btn.hidden = YES;
     } else {
         [self cancel];
         [self.btn setTitle:@"begin" forState:UIControlStateNormal];
+        self.btn.hidden = NO;
     }
 }
 
@@ -69,9 +71,11 @@
     self.snake = snake;
     GamaPool *pool = [[GamaPool alloc] initWithSnake:self.snake];
     pool.backgroundColor = [UIColor whiteColor];
-    pool.center = self.view.center;
+    pool.frame = CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 20);
+    [GAME_CONFIG makeReframe:pool];
     [self.view addSubview:pool];
     self.gamePool = pool;
+    [self.view bringSubviewToFront:self.btn];
 }
 
 - (void)startGame{

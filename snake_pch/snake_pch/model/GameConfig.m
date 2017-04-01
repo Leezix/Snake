@@ -26,8 +26,14 @@ static GameConfig *config = nil;
 }
 
 - (void)initSelf{
-    self.verticalCount = 50;
     self.horizontalCount = 50;
+    _unitLength = SCREEN_WIDTH / self.horizontalCount;
+}
+
+- (void)makeReframe:(UIView *)view{
+    CGFloat height = view.hm_height;
+    self.verticalCount = height / _unitLength;
+    view.hm_height = self.verticalCount * _unitLength;
 }
 
 @end

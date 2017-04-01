@@ -6,7 +6,7 @@
 //  Copyright © 2017年 lzx. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define GAME_CONFIG [GameConfig shareInstance]
 /**
@@ -18,7 +18,11 @@
 @property(nonatomic, assign) int horizontalCount;
 /**垂直方向格子数*/
 @property(nonatomic, assign) int verticalCount;
+/**垂直方向格子数*/
+@property(nonatomic, assign, readonly) CGFloat unitLength;
 
 + (instancetype)shareInstance;
+
+- (void)makeReframe:(UIView *)view;
 
 @end

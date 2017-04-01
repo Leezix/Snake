@@ -8,10 +8,7 @@
 
 #import "GamaPool.h"
 #import "HMObjcSugar.h"
-@interface GamaPool (){
-    /**一个单位的长度*/
-    CGFloat _unitLength;
-}
+@interface GamaPool ()
 
 @property(nonatomic, strong) Snake *snake;
 
@@ -23,15 +20,8 @@
     self = [super init];
     if (self) {
         self.snake = snake;
-        [self initUI];
     }
     return self;
-}
-
-- (void)initUI{
-    self.hm_width = [UIScreen mainScreen].bounds.size.width;
-    self.hm_height = self.hm_width;
-    _unitLength = self.hm_width / GAME_CONFIG.horizontalCount;
 }
 
 - (BOOL)isKnockPoint:(ZXPoint *)point {
@@ -53,9 +43,9 @@
 
 - (void)drawSnake{
     for (ZXPoint *point in self.snake.bodys) {
-        CGFloat x = point.x * _unitLength;
-        CGFloat y = point.y * _unitLength;
-        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(x, y, _unitLength, _unitLength)];
+        CGFloat x = point.x * GAME_CONFIG.unitLength;
+        CGFloat y = point.y * GAME_CONFIG.unitLength;
+        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(x, y, GAME_CONFIG.unitLength, GAME_CONFIG.unitLength)];
         [path fill];
         
     }
