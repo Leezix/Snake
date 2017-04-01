@@ -24,8 +24,12 @@ typedef enum {
 
 @property(nonatomic, assign, readonly) NSUInteger length;
 
+@property(nonatomic, weak) id delegate;
+
 + (instancetype)create;
 
-- (void)move;
+- (void)restart;
+
+- (void)moveWithCompleteHandle:(void (^)(ZXPoint *))completeHandle;
 
 @end

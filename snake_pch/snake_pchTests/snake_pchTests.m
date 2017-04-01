@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Snake.h"
 
 @interface snake_pchTests : XCTestCase
 
@@ -27,6 +28,10 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    Snake *obj = [Snake create];
+    ZXPoint *newP = [ZXPoint pointWithCGPoint:CGPointMake(1, 2)];
+    [obj performSelector:@selector(addNewHead:) withObject:newP];
+    XCTAssert(newP == obj.bodys.firstObject, @"false");
 }
 
 - (void)testPerformanceExample {

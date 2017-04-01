@@ -14,7 +14,7 @@
     return self.bodys.count;
 }
 
-- (void)move{
+- (void)moveWithCompleteHandle:(void (^)(ZXPoint *))completeHandle {
     ZXPoint *headPoint = [self.bodys.firstObject copy];
     switch (_direction) {
         case SnakeDirection_Up:
@@ -35,6 +35,7 @@
     }
     [self removeLast];
     [self addNewHead:headPoint];
+    completeHandle(headPoint);
 }
 
 + (instancetype)create{
@@ -43,6 +44,12 @@
                     ].mutableCopy;
     snake.direction = SnakeDirection_Down;
     return snake;
+}
+
+- (void)restart{
+    self.bodys = @[ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
+                   ].mutableCopy;
+    self.direction = SnakeDirection_Down;
 }
 
 - (NSString *)description{

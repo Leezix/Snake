@@ -47,12 +47,19 @@
 }
 
 - (void)begin{
-    [self startGame];
+    __weak typeof(self) weakself = self;
+    //修复快速点击btn的bug, _timer在invalidate未完成时, 便执行新的一轮_timer赋值. 导致内存泄露
+    if (!_timer.valid) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1. target:weakself selector:@selector(startGame) userInfo:nil repeats:YES];
+        [_timer fire];
+    }
 }
 
 - (void)cancel{
     [_timer invalidate];
     _timer = nil;
+    [self.snake restart];
+    [self.gamePool setNeedsDisplay];
 }
 
 #pragma mark --------------Initialize
@@ -68,10 +75,12 @@
 }
 
 - (void)startGame{
-    __weak typeof(self) wealself = self;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [wealself.snake move];
-        [wealself.gamePool setNeedsDisplay];
+    [self.snake moveWithCompleteHandle:^(ZXPoint *headPoint) {
+        if ([self isKnock:headPoint]) {//撞墙
+            [self cancel];
+        } else {
+            [self.gamePool setNeedsDisplay];
+        }
     }];
 }
 
@@ -132,6 +141,16 @@
     }
 }
 
+- (BOOL)isKnock:(ZXPoint *)point{
+    return NO;
+}
+
+- (void)alertMessage:(NSString *)message{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"🐍" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
+    [controller addAction:action];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 #pragma mark --------------TEST
 
