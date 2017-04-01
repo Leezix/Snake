@@ -35,7 +35,7 @@
 }
 
 - (BOOL)isKnockPoint:(ZXPoint *)point {
-    return point.x >= GAME_CONFIG.horizontalCount || point.y >= GAME_CONFIG.verticalCount;
+    return point.x >= GAME_CONFIG.horizontalCount || point.x < 0 || point.y >= GAME_CONFIG.verticalCount || point.y < 0;
 }
 
 - (void)drawRect:(CGRect)rect {
