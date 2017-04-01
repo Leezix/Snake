@@ -13,6 +13,8 @@
     CGFloat _unitLength;
 }
 
+@property(nonatomic, strong) Snake *snake;
+
 @end
 
 @implementation GamaPool

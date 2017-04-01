@@ -17,4 +17,12 @@
     return zx_point;
 }
 
+#pragma mark NSCopying
+- (id)copyWithZone:(NSZone *)zone{
+    ZXPoint *point = [[self class] allocWithZone:zone];
+    point.x = _x;
+    point.y = _y;
+    return point;
+}
+
 @end

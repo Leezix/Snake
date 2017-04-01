@@ -10,8 +10,6 @@
 #import "Snake.h"
 @interface GamaPool : UIView
 
-@property(nonatomic, strong) Snake *snake;
-
 - (instancetype)initWithSnake:(Snake *)snake;
 
 @end
