@@ -39,6 +39,8 @@
     
     //画🐍
     [self drawSnake];
+    //画🍎
+    [self drawFruit];
 }
 
 - (void)drawSnake{
@@ -49,6 +51,13 @@
         [path fill];
         
     }
+}
+
+- (void)drawFruit{
+    CGFloat x = _snake.fruit.x * GAME_CONFIG.unitLength;
+    CGFloat y = _snake.fruit.y * GAME_CONFIG.unitLength;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(x, y, GAME_CONFIG.unitLength, GAME_CONFIG.unitLength)];
+    [path fill];
 }
 
 

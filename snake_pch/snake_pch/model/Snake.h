@@ -26,10 +26,16 @@ typedef enum {
 
 @property(nonatomic, weak) id delegate;
 
+@property(nonatomic, strong, readonly) ZXPoint *fruit;
+
 + (instancetype)create;
 
 - (void)restart;
 
 - (void)moveWithCompleteHandle:(void (^)(ZXPoint *))completeHandle;
+
+- (BOOL)containPoint:(ZXPoint *)point;
+
+- (void)changeFruit;
 
 @end

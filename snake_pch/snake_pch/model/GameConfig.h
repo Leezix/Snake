@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXPoint.h"
 
 #define GAME_CONFIG [GameConfig shareInstance]
 /**
@@ -20,6 +21,8 @@
 @property(nonatomic, assign) int verticalCount;
 /**垂直方向格子数*/
 @property(nonatomic, assign, readonly) CGFloat unitLength;
+/**时间(速度)*/
+@property(nonatomic, assign) NSTimeInterval timeInterval;
 
 + (instancetype)shareInstance;
 

@@ -17,6 +17,10 @@
     return zx_point;
 }
 
+- (BOOL)isEqualToPoint:(ZXPoint *)point {
+    return self.x == point.x && self.y == point.y;
+}
+
 #pragma mark NSCopying
 - (id)copyWithZone:(NSZone *)zone{
     ZXPoint *point = [[self class] allocWithZone:zone];

@@ -33,23 +33,59 @@
             NSAssert(false, @"----->ZX_CRASH: 方向错误");
             break;
     }
-    [self removeLast];
     [self addNewHead:headPoint];
+    if ([headPoint isEqualToPoint:_fruit]) {
+        [self changeFruit];
+    } else {
+        [self removeLast];
+    }
     completeHandle(headPoint);
 }
 
 + (instancetype)create{
     Snake *snake = [self new];
-    snake.bodys = @[ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
-                    ].mutableCopy;
-    snake.direction = SnakeDirection_Down;
     return snake;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+- (void)initialize{
+    _bodys = @[ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
+               ].mutableCopy;
+    _fruit = ZXPOINT_MAKE(1, 10);
+    _direction = SnakeDirection_Down;
+}
+
+- (BOOL)containPoint:(ZXPoint *)point {
+    for (ZXPoint *body in self.bodys) {
+        if ([body isEqualToPoint:point]){
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (void)restart{
-    self.bodys = @[ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
-                   ].mutableCopy;
-    self.direction = SnakeDirection_Down;
+    [self initialize];
+}
+
+- (void)changeFruit {
+    while (1) {
+        int x = arc4random_uniform(GAME_CONFIG.horizontalCount);
+        int y = arc4random_uniform(GAME_CONFIG.verticalCount);
+        ZXPoint *newFruit = ZXPOINT_MAKE(x, y);
+         if (![self containPoint:newFruit]) {
+             _fruit = newFruit;
+            break;
+        }
+    }
 }
 
 - (NSString *)description{

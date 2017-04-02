@@ -52,7 +52,7 @@
     __weak typeof(self) weakself = self;
     //修复快速点击btn的bug, _timer在invalidate未完成时, 便执行新的一轮_timer赋值. 导致内存泄露
     if (!_timer.valid) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:.1 target:weakself selector:@selector(startGame) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:GAME_CONFIG.timeInterval target:weakself selector:@selector(startGame) userInfo:nil repeats:YES];
         [_timer fire];
     }
 }
@@ -93,7 +93,6 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panAction:)];
     pan.minimumNumberOfTouches = 1;
     pan.maximumNumberOfTouches = 1;
-    pan.delegate = self;
     [self.view addGestureRecognizer:pan];
 }
 

@@ -15,4 +15,6 @@
 
 + (instancetype)pointWithCGPoint:(CGPoint)point;
 
+- (BOOL)isEqualToPoint:(ZXPoint *)point;
+
 @end
