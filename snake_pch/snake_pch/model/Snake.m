@@ -14,7 +14,7 @@
     return self.bodys.count;
 }
 
-- (void)moveWithCompleteHandle:(void (^)(ZXPoint *))completeHandle {
+- (void)moveWithCompleteHandle:(void (^)(ZXPoint *point, bool hasEatMyself))completeHandle {
     ZXPoint *headPoint = [self.bodys.firstObject copy];
     switch (_direction) {
         case SnakeDirection_Up:
@@ -33,13 +33,20 @@
             NSAssert(false, @"----->ZX_CRASH: 方向错误");
             break;
     }
+    //判断是否吃到自己
+    if ([self containPoint:headPoint]){
+        completeHandle(headPoint, YES);
+        return;
+    }
     [self addNewHead:headPoint];
+    //判断是否吃到水果
     if ([headPoint isEqualToPoint:_fruit]) {
         [self changeFruit];
     } else {
         [self removeLast];
     }
-    completeHandle(headPoint);
+    
+    completeHandle(headPoint, NO);
 }
 
 + (instancetype)create{
@@ -57,9 +64,9 @@
 }
 
 - (void)initialize{
-    _bodys = @[ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
+    _bodys = @[ZXPOINT_MAKE(1, 19), ZXPOINT_MAKE(1, 18), ZXPOINT_MAKE(1, 17), ZXPOINT_MAKE(1, 16), ZXPOINT_MAKE(1, 15), ZXPOINT_MAKE(1, 14), ZXPOINT_MAKE(1, 13), ZXPOINT_MAKE(1, 12), ZXPOINT_MAKE(1, 11), ZXPOINT_MAKE(1, 10), ZXPOINT_MAKE(1, 9), ZXPOINT_MAKE(1, 8), ZXPOINT_MAKE(1, 7), ZXPOINT_MAKE(1, 6), ZXPOINT_MAKE(1, 5), ZXPOINT_MAKE(1, 4), ZXPOINT_MAKE(1, 3), ZXPOINT_MAKE(1, 2), ZXPOINT_MAKE(1, 1)
                ].mutableCopy;
-    _fruit = ZXPOINT_MAKE(1, 10);
+    _fruit = ZXPOINT_MAKE(1, 20);
     _direction = SnakeDirection_Down;
 }
 

@@ -79,7 +79,11 @@
 }
 
 - (void)startGame{
-    [self.snake moveWithCompleteHandle:^(ZXPoint *headPoint) {
+    [self.snake moveWithCompleteHandle:^(ZXPoint *headPoint, bool hasEatMyself) {
+        if (hasEatMyself) {
+            [self cancelClick];
+            [self alertMessage:@"吃到自己了=.="];
+        }
         if ([self isKnock:headPoint]) {//撞墙
             [self cancelClick];
             [self alertMessage:@"撞墙了=.="];
@@ -120,8 +124,15 @@
 }
 
 - (void)changeDirection{
-    self.snake.direction = [self evaluateDirecton];
-//    [self testDirection:[self evaluateDirecton]];
+    SnakeDirection verticalDirection = SnakeDirection_Up | SnakeDirection_Down;
+    SnakeDirection horizontalDirection = SnakeDirection_Left | SnakeDirection_Right;
+    SnakeDirection orderDirection = [self evaluateDirecton];
+    if (((self.snake.direction & verticalDirection) && (orderDirection & horizontalDirection)) ||
+        ((self.snake.direction & horizontalDirection) && (orderDirection & verticalDirection))) {
+        self.snake.direction = orderDirection;
+    } else {
+        NSLog(@"invalid direction");
+    }
 }
 
 - (SnakeDirection)evaluateDirecton{

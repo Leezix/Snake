@@ -10,10 +10,10 @@
 #import "ZXPoint.h"
 
 typedef enum {
-    SnakeDirection_Up,
-    SnakeDirection_Left,
-    SnakeDirection_Right,
-    SnakeDirection_Down,
+    SnakeDirection_Up = 1 << 0,
+    SnakeDirection_Left = 1 << 1,
+    SnakeDirection_Right = 1 << 2,
+    SnakeDirection_Down = 1 << 3,
 }SnakeDirection;
 
 @interface Snake : NSObject
@@ -32,7 +32,7 @@ typedef enum {
 
 - (void)restart;
 
-- (void)moveWithCompleteHandle:(void (^)(ZXPoint *))completeHandle;
+- (void)moveWithCompleteHandle:(void (^)(ZXPoint *point, bool hasEatMyself))completeHandle;
 
 - (BOOL)containPoint:(ZXPoint *)point;
 
