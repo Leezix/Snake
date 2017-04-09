@@ -27,7 +27,7 @@ static GameConfig *config = nil;
 
 - (void)initSelf{
     self.horizontalCount = 50;
-    self.timeInterval = 1.;
+    self.timeInterval = .1;
     _unitLength = SCREEN_WIDTH / self.horizontalCount;
 }
 

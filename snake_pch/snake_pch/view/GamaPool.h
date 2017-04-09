@@ -10,6 +10,8 @@
 #import "Snake.h"
 @interface GamaPool : UIView
 
+@property(nonatomic, copy) Snake *snake;
+
 - (BOOL)isKnockPoint:(ZXPoint *)point;
 
 - (instancetype)initWithSnake:(Snake *)snake;

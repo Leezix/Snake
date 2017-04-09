@@ -13,13 +13,14 @@
     NSMutableArray<NSValue *> *_topTenPoint;
 }
 
-@property(nonatomic, weak) GamaPool *gamePool;
+@property(nonatomic, strong) GamaPool *gamePool;
 
-@property(nonatomic, weak) Snake *snake;
+@property(nonatomic, strong) Snake *snake;
 
 @property(nonatomic, strong) NSTimer *timer;
 
 @property (weak, nonatomic) IBOutlet UIButton *btn;
+
 @end
 
 @implementation ViewController
@@ -67,6 +68,7 @@
 #pragma mark --------------Initialize
 
 - (void)initUI{
+    /*****createSnake******/
     Snake *snake = [Snake create];
     self.snake = snake;
     GamaPool *pool = [[GamaPool alloc] initWithSnake:self.snake];
@@ -76,19 +78,22 @@
     [self.view addSubview:pool];
     self.gamePool = pool;
     [self.view bringSubviewToFront:self.btn];
+    
+    /*****createConfig******/
+    
 }
 
 - (void)startGame{
-    [self.snake moveWithCompleteHandle:^(ZXPoint *headPoint, bool hasEatMyself) {
+    [self.snake moveWithCompleteHandle:^(Snake *snake, ZXPoint *point, bool hasEatMyself) {
         if (hasEatMyself) {
             [self cancelClick];
             [self alertMessage:@"吃到自己了=.="];
         }
-        if ([self isKnock:headPoint]) {//撞墙
+        if ([self isKnock:point]) {//撞墙
             [self cancelClick];
             [self alertMessage:@"撞墙了=.="];
         } else {
-            [self.gamePool setNeedsDisplay];
+            self.gamePool.snake = snake;
         }
     }];
 }

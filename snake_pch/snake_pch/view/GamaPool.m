@@ -10,8 +10,6 @@
 #import "HMObjcSugar.h"
 @interface GamaPool ()
 
-@property(nonatomic, strong) Snake *snake;
-
 @end
 
 @implementation GamaPool
@@ -60,5 +58,9 @@
     [path fill];
 }
 
+- (void)setSnake:(Snake *)snake{
+    _snake = snake.mutableCopy;
+    [self setNeedsDisplay];
+}
 
 @end

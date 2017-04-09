@@ -23,10 +23,16 @@
 
 #pragma mark NSCopying
 - (id)copyWithZone:(NSZone *)zone{
-    ZXPoint *point = [[self class] allocWithZone:zone];
+    ZXPoint *point = [[[self class] allocWithZone:zone] init];
     point.x = _x;
     point.y = _y;
     return point;
 }
 
+- (id)mutableCopyWithZone:(NSZone *)zone{
+    ZXPoint *point = [[[self class] allocWithZone:zone] init];
+    point.y = _y;
+    point.x = _x;
+    return point;
+}
 @end

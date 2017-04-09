@@ -16,7 +16,7 @@ typedef enum {
     SnakeDirection_Down = 1 << 3,
 }SnakeDirection;
 
-@interface Snake : NSObject
+@interface Snake : NSObject<NSCopying, NSMutableCopying>
 
 @property(nonatomic, strong) NSMutableArray<ZXPoint *> *bodys;
 
@@ -26,13 +26,13 @@ typedef enum {
 
 @property(nonatomic, weak) id delegate;
 
-@property(nonatomic, strong, readonly) ZXPoint *fruit;
+@property(nonatomic, strong) ZXPoint *fruit;
 
 + (instancetype)create;
 
 - (void)restart;
 
-- (void)moveWithCompleteHandle:(void (^)(ZXPoint *point, bool hasEatMyself))completeHandle;
+- (void)moveWithCompleteHandle:(void (^)(Snake *snake,ZXPoint *point, bool hasEatMyself))completeHandle;
 
 - (BOOL)containPoint:(ZXPoint *)point;
 
