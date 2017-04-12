@@ -1,0 +1,6 @@
+[submodule "ZXConvenientCode"]
+	path = ZXConvenientCode
+	url = https://github.com/lizhuxian020/ZXConvenientCode.git
+[submodule "ZXSugarCode"]
+	path = ZXSugarCode
+	url = https://github.com/Leezix/ZXSugarCode

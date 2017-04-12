@@ -32,9 +32,9 @@ static GameConfig *config = nil;
 }
 
 - (void)makeReframe:(UIView *)view{
-    CGFloat height = view.hm_height;
+    CGFloat height = view.zx_height;
     self.verticalCount = height / _unitLength;
-    view.hm_height = self.verticalCount * _unitLength;
+    view.zx_height = self.verticalCount * _unitLength;
 }
 
 @end

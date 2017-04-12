@@ -15,7 +15,7 @@
 #endif /* PrefixHeader_pch */
 
 #import "GameConfig.h"
-#import "HMObjcSugar.h"
+#import <ZXSugarCode.h>
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height

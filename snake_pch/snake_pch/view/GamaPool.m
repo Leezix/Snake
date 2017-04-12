@@ -7,7 +7,7 @@
 //
 
 #import "GamaPool.h"
-#import "HMObjcSugar.h"
+
 @interface GamaPool ()
 
 @end
