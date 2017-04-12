@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		55B542E84BADA3911DEB9F42 /* libPods-snake_pchUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA8B6B38807ABCAA926C4F4 /* libPods-snake_pchUITests.a */; };
 		633BB6552A911CE5B4BED70B /* libPods-snake_pch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED9B058F85F74EDA657F15C /* libPods-snake_pch.a */; };
-		7488DB261E9C68DC00E0F12E /* StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488DB251E9C68DC00E0F12E /* StartView.m */; };
-		7488DB2A1E9C6CA800E0F12E /* UIButton+initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488DB291E9C6CA800E0F12E /* UIButton+initialize.m */; };
 		74C1225E1E8E84A800F1A032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C1225D1E8E84A800F1A032 /* main.m */; };
 		74C122611E8E84A800F1A032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C122601E8E84A800F1A032 /* AppDelegate.m */; };
 		74C122671E8E84A800F1A032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C122651E8E84A800F1A032 /* Main.storyboard */; };
@@ -46,10 +44,6 @@
 /* Begin PBXFileReference section */
 		0E8830C8EE4777FB2F04DA19 /* libPods-snake_pchTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-snake_pchTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E15B68609220C545718021 /* Pods-snake_pchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snake_pchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-snake_pchUITests/Pods-snake_pchUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7488DB241E9C68DC00E0F12E /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
-		7488DB251E9C68DC00E0F12E /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
-		7488DB281E9C6CA800E0F12E /* UIButton+initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+initialize.h"; sourceTree = "<group>"; };
-		7488DB291E9C6CA800E0F12E /* UIButton+initialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+initialize.m"; sourceTree = "<group>"; };
 		74C122591E8E84A800F1A032 /* snake_pch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake_pch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C1225D1E8E84A800F1A032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74C1225F1E8E84A800F1A032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,15 +114,6 @@
 				8FA8B6B38807ABCAA926C4F4 /* libPods-snake_pchUITests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7488DB271E9C6C8900E0F12E /* category */ = {
-			isa = PBXGroup;
-			children = (
-				7488DB281E9C6CA800E0F12E /* UIButton+initialize.h */,
-				7488DB291E9C6CA800E0F12E /* UIButton+initialize.m */,
-			);
-			path = category;
 			sourceTree = "<group>";
 		};
 		74C122501E8E84A800F1A032 = {
@@ -220,11 +205,8 @@
 		74C122991E8E84E900F1A032 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				7488DB271E9C6C8900E0F12E /* category */,
 				74C1229A1E8E84E900F1A032 /* GamaPool.h */,
 				74C1229B1E8E84E900F1A032 /* GamaPool.m */,
-				7488DB241E9C68DC00E0F12E /* StartView.h */,
-				7488DB251E9C68DC00E0F12E /* StartView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -538,9 +520,7 @@
 				74C1229D1E8E84E900F1A032 /* GameConfig.m in Sources */,
 				74C122611E8E84A800F1A032 /* AppDelegate.m in Sources */,
 				74C122A01E8E84E900F1A032 /* GamaPool.m in Sources */,
-				7488DB261E9C68DC00E0F12E /* StartView.m in Sources */,
 				74C1229C1E8E84E900F1A032 /* ViewController.m in Sources */,
-				7488DB2A1E9C6CA800E0F12E /* UIButton+initialize.m in Sources */,
 				74C1225E1E8E84A800F1A032 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
