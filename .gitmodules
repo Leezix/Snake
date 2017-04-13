@@ -4,3 +4,6 @@
 [submodule "ZXSugarCode"]
 	path = ZXSugarCode
 	url = https://github.com/Leezix/ZXSugarCode
+[submodule "ZXUIKit_iOS"]
+	path = ZXUIKit_iOS
+	url = git@github.com:lizhuxian020/ZXUIKit_iOS.git

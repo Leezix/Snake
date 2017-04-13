@@ -14,25 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - ZXConvenientCode (1.0.3):
-    - ZXConvenientCode/Interface (= 1.0.3)
-    - ZXConvenientCode/Module (= 1.0.3)
-  - ZXConvenientCode/Interface (1.0.3):
+  - Masonry (1.0.2)
+  - ZXConvenientCode (1.0.4):
+    - ZXConvenientCode/Interface (= 1.0.4)
+    - ZXConvenientCode/Module (= 1.0.4)
+  - ZXConvenientCode/Interface (1.0.4):
     - ZXConvenientCode/Module
-  - ZXConvenientCode/Module (1.0.3)
+  - ZXConvenientCode/Module (1.0.4)
+  - ZXUIKit (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - Masonry
   - ZXConvenientCode (from `../ZXConvenientCode/`)
+  - ZXUIKit (from `../ZXUIKit_iOS`)
 
 EXTERNAL SOURCES:
   ZXConvenientCode:
     :path: "../ZXConvenientCode/"
+  ZXUIKit:
+    :path: "../ZXUIKit_iOS"
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  ZXConvenientCode: e772843f190456c76194fe4f6292061513179527
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  ZXConvenientCode: 054b3b4d06db88507e2e6e710a62478b668c91bc
+  ZXUIKit: 239f921bb0b980e1b47c5fe81eefebb152a3c0db
 
-PODFILE CHECKSUM: 3f4386515f741100459c41e571402ccff4005e36
+PODFILE CHECKSUM: 2b3c4a809d41942f1a062c91e3e8f937643c7a3c
 
 COCOAPODS: 1.1.0

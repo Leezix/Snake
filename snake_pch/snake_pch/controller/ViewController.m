@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 #import "GamaPool.h"
+#import "GameStartView.h"
 
 @interface ViewController () {
     NSMutableArray<NSValue *> *_topTenPoint;
 }
 
 @property(nonatomic, strong) GamaPool *gamePool;
+
+@property(nonatomic, strong) GameStartView *startView;
 
 @property(nonatomic, strong) Snake *snake;
 
@@ -79,8 +82,13 @@
     self.gamePool = pool;
     [self.view bringSubviewToFront:self.btn];
     
-    /*****createConfig******/
-    
+    /*****gameStartView******/
+    self.startView = [GameStartView shareInstance];
+    [self.view addSubview:self.startView];
+    self.startView.zx_width = 200;
+    self.startView.zx_height = 200;
+    [self.startView showBorder];
+    self.startView.center = self.view.center;
 }
 
 - (void)startGame{

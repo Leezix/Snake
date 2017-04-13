@@ -6,8 +6,11 @@
 target 'snake_pch' do
 
 pod "AFNetworking"
+pod "Masonry"
 
 pod 'ZXConvenientCode', :path => '../ZXConvenientCode/'
+
+pod 'ZXUIKit', :path => '../ZXUIKit_iOS'
 
 # pod 'ZXSugarCode', :path => '../ZXSugarCode'
 
