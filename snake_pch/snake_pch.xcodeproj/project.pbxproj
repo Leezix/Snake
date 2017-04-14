@@ -21,6 +21,7 @@
 		74C1229E1E8E84E900F1A032 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C122961E8E84E900F1A032 /* Snake.m */; };
 		74C1229F1E8E84E900F1A032 /* ZXPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C122981E8E84E900F1A032 /* ZXPoint.m */; };
 		74C122A01E8E84E900F1A032 /* GamaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C1229B1E8E84E900F1A032 /* GamaPool.m */; };
+		74D719E31E9E4866000D29A5 /* GameStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D719E21E9E4866000D29A5 /* GameStartView.m */; };
 		99FB142C461C11CAA5B228EB /* libPods-snake_pchTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8830C8EE4777FB2F04DA19 /* libPods-snake_pchTests.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		74C1229A1E8E84E900F1A032 /* GamaPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamaPool.h; sourceTree = "<group>"; };
 		74C1229B1E8E84E900F1A032 /* GamaPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamaPool.m; sourceTree = "<group>"; };
 		74C122A11E8E851500F1A032 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		74D719E11E9E4866000D29A5 /* GameStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartView.h; sourceTree = "<group>"; };
+		74D719E21E9E4866000D29A5 /* GameStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartView.m; sourceTree = "<group>"; };
 		846073AF2BD9F7621FB6400E /* Pods-snake_pch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snake_pch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snake_pch/Pods-snake_pch.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA8B6B38807ABCAA926C4F4 /* libPods-snake_pchUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-snake_pchUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA28303C61AF7804F12A2E0 /* Pods-snake_pchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snake_pchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-snake_pchTests/Pods-snake_pchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 			children = (
 				74C1229A1E8E84E900F1A032 /* GamaPool.h */,
 				74C1229B1E8E84E900F1A032 /* GamaPool.m */,
+				74D719E11E9E4866000D29A5 /* GameStartView.h */,
+				74D719E21E9E4866000D29A5 /* GameStartView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				74C1229D1E8E84E900F1A032 /* GameConfig.m in Sources */,
 				74C122611E8E84A800F1A032 /* AppDelegate.m in Sources */,
 				74C122A01E8E84E900F1A032 /* GamaPool.m in Sources */,
+				74D719E31E9E4866000D29A5 /* GameStartView.m in Sources */,
 				74C1229C1E8E84E900F1A032 /* ViewController.m in Sources */,
 				74C1225E1E8E84A800F1A032 /* main.m in Sources */,
 			);

@@ -10,8 +10,24 @@
 
 #define GAMESTARTVIEW_MARGIN 10
 
+typedef void (^BtnClickHandle)(UIButton *btn);
+
+@class GameStartView;
+
+@protocol GameStartViewDelegate <NSObject>
+
+@required
+- (void)startView:(GameStartView *)view ClickHandle:(NSInteger)idx;
+
+@end
+
 @interface GameStartView : UIView
 
-+ (instancetype)shareInstance;
+@property(nonatomic, weak) id<GameStartViewDelegate> delegate;
+
+- (instancetype)initWithBtnTitles:(NSArray<NSString *> *)btnTitles;
+
+- (void)show;
+- (void)hide;
 
 @end

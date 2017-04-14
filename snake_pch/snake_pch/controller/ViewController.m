@@ -10,7 +10,8 @@
 #import "GamaPool.h"
 #import "GameStartView.h"
 
-@interface ViewController () {
+@interface ViewController () <GameStartViewDelegate>
+{
     NSMutableArray<NSValue *> *_topTenPoint;
 }
 
@@ -42,14 +43,15 @@
 
 - (IBAction)cancelClick {
     if ([self.btn.titleLabel.text isEqualToString:@"begin"]) {
-        [self begin];
+//        [self begin];
         [self.btn setTitle:@"cancel" forState:UIControlStateNormal];
         self.btn.hidden = YES;
     } else {
-        [self cancel];
+//        [self cancel];
         [self.btn setTitle:@"begin" forState:UIControlStateNormal];
         self.btn.hidden = NO;
     }
+    [self.startView show];
 }
 
 - (void)begin{
@@ -83,12 +85,10 @@
     [self.view bringSubviewToFront:self.btn];
     
     /*****gameStartView******/
-    self.startView = [GameStartView shareInstance];
+    self.startView = [[GameStartView alloc] initWithBtnTitles:@[@"Start", @"Pause", @"Config"]];
+    self.startView.delegate = self;
     [self.view addSubview:self.startView];
-    self.startView.zx_width = 200;
-    self.startView.zx_height = 200;
-    [self.startView showBorder];
-    self.startView.center = self.view.center;
+    self.startView.frame = self.view.frame;
 }
 
 - (void)startGame{
@@ -178,6 +178,24 @@
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
     [controller addAction:action];
     [self presentViewController:controller animated:YES completion:nil];
+}
+
+#pragma mark GameStartViewDelegate
+- (void)startView:(GameStartView *)view ClickHandle:(NSInteger)idx {
+    NSLog(@"%ld", (long)idx);
+    switch (idx) {
+        case 0:
+            [self.startView hide];
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark --------------TEST
