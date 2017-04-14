@@ -37,8 +37,6 @@
     [self addGesture];
 }
 
-
-
 #pragma mark --------------Initialize
 
 - (void)initUI{
@@ -53,7 +51,7 @@
     self.gamePool = pool;
     
     /*****gameStartView******/
-    self.startView = [[GameStartView alloc] initWithBtnTitles:@[@"Start", @"Pause", @"Config"]];
+    self.startView = [[GameStartView alloc] initWithBtnTitles:@[@"Start"]];
     self.startView.delegate = self;
     [self.view addSubview:self.startView];
     self.startView.frame = self.view.frame;
@@ -101,7 +99,7 @@
         [self.startView showWithComplete:nil];
     } else {
         [self.startView hideWithComplete:^{
-            [self startView];
+            [self startGame];
         }];
     }
 }
@@ -198,15 +196,6 @@
     }];
 }
 
-#pragma mark --------------Utils
-
-- (void)alertMessage:(NSString *)message{
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"🐍" message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
-    [controller addAction:action];
-    [self presentViewController:controller animated:YES completion:nil];
-}
-
 #pragma mark GameStartViewDelegate
 - (void)startView:(GameStartView *)view ClickHandle:(NSInteger)idx {
     NSLog(@"%ld", (long)idx);
@@ -224,6 +213,15 @@
         default:
             break;
     }
+}
+
+#pragma mark --------------Utils
+
+- (void)alertMessage:(NSString *)message{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"🐍" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil];
+    [controller addAction:action];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark --------------TEST
