@@ -27,7 +27,7 @@ typedef void (^BtnClickHandle)(UIButton *btn);
 
 - (instancetype)initWithBtnTitles:(NSArray<NSString *> *)btnTitles;
 
-- (void)show;
-- (void)hide;
+- (void)showWithComplete:(void (^)())complete;
+- (void)hideWithComplete:(void (^)())complete;
 
 @end

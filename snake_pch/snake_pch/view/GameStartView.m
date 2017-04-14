@@ -69,13 +69,13 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     if (self.hidden) {
-        [self makeSubviewDisappearWithAnimation:NO];
+        [self makeSubviewDisappearWithAnimation:NO completeHandle:nil];
     } else {
-        [self makeSubviewAppearWithAnimation:NO];
+        [self makeSubviewAppearWithAnimation:NO completeHandle:nil];
     }
 }
 
-- (void)makeSubviewAppearWithAnimation:(BOOL)animate {
+- (void)makeSubviewAppearWithAnimation:(BOOL)animate completeHandle:(void (^)())complete{
     self.hidden = NO;
     CGPoint center = self.center;
     CGFloat x, y;
@@ -99,6 +99,8 @@
         if (animate) {
             [UIView animateWithDuration:1. animations:^{
                 obj.zx_origin = originPoint;
+            } completion:^(BOOL finished) {
+                complete ? complete() : nil;
             }];
         } else {
             obj.zx_origin = originPoint;
@@ -106,7 +108,7 @@
     }];
 }
 
-- (void)makeSubviewDisappearWithAnimation:(BOOL)animate {
+- (void)makeSubviewDisappearWithAnimation:(BOOL)animate completeHandle:(void (^)())complete{
     CGPoint center = self.center;
     CGFloat x;
     x = center.x - _zxbuttons[0].zx_width / 2.0;
@@ -119,6 +121,7 @@
                 if (idx == 0) {
                     //isFirst
                     self.hidden = YES;
+                    complete ? complete() : nil;
                 }
             }];
         } else {
@@ -133,11 +136,11 @@
 }
 
 
-- (void)show {
-    [self makeSubviewAppearWithAnimation:YES];
+- (void)showWithComplete:(void (^)())complete; {
+    [self makeSubviewAppearWithAnimation:YES completeHandle:complete];
 }
-- (void)hide {
-    [self makeSubviewDisappearWithAnimation:YES];
+- (void)hideWithComplete:(void (^)())complete {
+    [self makeSubviewDisappearWithAnimation:YES completeHandle:complete];
 }
 
 @end
